@@ -151,39 +151,4 @@ int main(){
     }
 
     return 0;
-
-    // ISOLATED CODE TO KEEP TRACK OF HOW EACH FUNCTION AND CONSTRUCTOR WORKS //
-
-    mainFolder.printInfo();
-    mainFolder.printFolders();
-
-    cout << "which folder do you want to add to?: ";
-    cin >> folderName;
-    cout << "add new file: ";
-    cin >> newFileName;
-    mainFolder.getFolder(folderName)->addFile(newFileName, 61123);
-    mainFolder.getFolder(folderName)->printFiles();
-
-    cout << endl;
-    mainFolder.getFolder("Documents")->printInfo(); //prints the information of the folder "Documents"
-    mainFolder.getFolder("Documents")->printFiles(); //prints the files stored inside "Documents"
-    mainFolder.getFolder("Documents")->printFolders(); //prints the folders stored within "Documents"S
-    cout << endl;
-    cout << "largest File in " << mainFolder.getFolder("Documents")->getName() << ": \n";
-    mainFolder.getFolder("Documents")->findLargest(); //fetches the "Documents folder and fetches the largest file within the folder
-
-    cout << "\nchange name of file, enter new name: ";
-    mainFolder.getFolder("Documents")->changeFileName();
-    mainFolder.getFolder("Documents")->printFiles();
-
-    cout << endl;
-    cout << "new name of folder: ";
-    mainFolder.getFolder("Documents")->changeFolderName();
-    mainFolder.getFolder("Documents")->printFolders();
-    
-    //mainFolder.getFolder("Documents")->getFolder("Schoolwork")->printFiles(); //doesn't work, can leave out
-
-
-    cout << endl;
-    return 0;
 }
